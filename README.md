@@ -3,7 +3,7 @@ This repo will walk you through the pattern of creating a multi-agent system usi
 
 ![Screenshot](AOAI_ASSIST.png)
 
-In the realm of artificial intelligence, agents stand as the cornerstone of innovation, autonomously navigating through data, making decisions, and executing tasks that were once exclusively human domains. As we delve into the intricacies of intelligent agents, the emphasis on their autonomous learning and adaptability in various environments becomes evident. These agents, particularly those harnessing the power of reinforcement learning (RL) and large language models (LLMs), are pivotal in advancing AI to unprecedented levels of sophistication.
+In the realm of artificial intelligence, agents stand as the cornerstone of innovation, autonomously navigating through data, making decisions, and executing tasks that were once exclusively human domains. As we delve into the intricacies of intelligent agents, the emphasis on their autonomous learning and adaptability in various environments becomes evident. These agents, particularly those harnessing the power of large language models (LLMs), are pivotal in advancing AI to unprecedented levels of sophistication.
 
 The importance of agents in AI cannot be overstated. They are the harbingers of a future where AI systems can interact with, learn from, and adapt to their environments, leading to more personalized and efficient solutions across industries. However, the complexity of creating such intelligent systems has been a significant barrier to their widespread adoption.
 
