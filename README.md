@@ -15,4 +15,47 @@ The diagram above serves as an example to demonstrate the overall architectural 
 
 We define the three agents as follows:
 
+<pre lang=lisp>
+  dalle_assistant = client.beta.assistants.create(
+    name=name_dl,
+    instructions=instructions_dl,
+    model=api_deployment_name,
+    tools=tools
+)
+</pre>
+<pre lang=lisp>
+  vision_assistant = client.beta.assistants.create(
+    name=name_vs,
+    instructions=instructions_vs,
+    model=api_deployment_name,
+    tools=tools
+)
+</pre>
+<pre lang=lisp>
+  user_proxy = client.beta.assistants.create(
+    name=name_pa,
+    instructions=instructions_pa,
+    model=api_deployment_name,
+    tools=tools
+)
+</pre>
 
+The dalle_assistant agent has a function that to generate images and the vision_assistant has a function to analyze images. You can find the definition and functions of these agents in the sample code provided below.
+
+The proxy_agent has a function to send a message to appropriate agents to accomplish the task. The send message function uses the agents_threads structure to keep track of the agents and their threads, through out the entire conversation. If a thread has not been created between the proxy agent and the other agents, it creates one to initiate the conversation.
+
+</pre>
+<pre lang=lisp>
+  agents_threads: Dict[str, Dict[str, Optional[str]]] = {  
+    "dalle_assistant": {  
+        "agent": dalle_assistant, 
+        "thread": None
+    },
+    "vision_assistant": {  
+        "agent": vision_assistant, 
+        "thread": None
+    } 
+}  
+
+)
+</pre>
