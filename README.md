@@ -41,7 +41,7 @@ We define the three agents as follows:
 )
 </pre>
 
-The dalle_assistant agent has a function that to generate images and the vision_assistant has a function to analyze images. You can find the definition and functions of these agents in the sample code provided below.
+The dalle_assistant agent has a function to generate images and the vision_assistant has a function to analyze images. You can find the definition and functions of these agents in the sample code provided below.
 
 The proxy_agent has a function to send a message to appropriate agents to accomplish the task. The send message function uses the agents_threads structure to keep track of the agents and their threads, through out the entire conversation. If a thread has not been created between the proxy agent and the other agents, it creates one to initiate the conversation.
 
